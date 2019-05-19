@@ -1,0 +1,18 @@
+services:
+    sheer.delete_pm_from_histoty.controller:
+        class: sheer\delete_pm_from_histoty\controller\index
+        arguments:
+            - '@request'
+            - '@dbal.conn'
+            - '@auth'
+            - '@user'
+            - '@language'
+            - '%core.root_path%'
+            - '%core.php_ext%'
+    sheer.delete_pm_from_histoty.listener:
+        class: sheer\delete_pm_from_histoty\event\listener
+        arguments:
+            - '@template'
+            - '@controller.helper'
+        tags:
+            - { name: event.listener }
