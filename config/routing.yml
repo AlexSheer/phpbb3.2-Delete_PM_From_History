@@ -1,0 +1,5 @@
+sheer_delete_pm_from_histoty_controller:
+    pattern: /delete_pm_from_histoty
+    defaults: { _controller: sheer.delete_pm_from_histoty.controller:main }
+
+
