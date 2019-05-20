@@ -62,7 +62,7 @@ class index
 
 		$this->lang->add_lang('ucp');
 		$msg_ids = $this->request->variable('mark', array(''));
-		$cur_folder_id = 'inbox';
+		$cur_folder_id = $this->request->variable('folder_id', 0);
 
 		if (sizeof($msg_ids))
 		{

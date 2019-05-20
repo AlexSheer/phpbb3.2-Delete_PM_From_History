@@ -49,7 +49,7 @@ class listener implements EventSubscriberInterface
 
 	public function ucppm_view_messsage($event)
 	{		$this->template->assign_vars(array(
-			'DELETE_ACTION' 	=> $this->helper->route('sheer_delete_pm_from_histoty_controller'),
+			'DELETE_ACTION' 	=> $this->helper->route('sheer_delete_pm_from_histoty_controller', array('folder_id' => $event['folder_id'])),
 		));
 	}
 }
